@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>MathGame | Disinstallazione</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #4338ca, #6366f1);
+        }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen flex items-center justify-center text-white">
+    <div class="max-w-2xl mx-auto p-8 text-center">
+        <div class="mb-8">
+            <span class="text-6xl">😢</span>
+        </div>
+        <h1 class="text-4xl font-bold mb-6">Ci dispiace vederti andare...</h1>
+        <p class="text-xl mb-8 opacity-90">
+            Grazie per aver utilizzato MathGame. Speriamo che tu possa tornare presto!
+        </p>
+        <div class="space-y-4">
+            <p class="text-lg">
+                Se hai riscontrato problemi o hai suggerimenti per migliorare il software,
+                non esitare a contattarci:
+            </p>
+            <a href="mailto:edobi@outlook.it" class="inline-block bg-white text-indigo-600 px-6 py-3 rounded-full font-bold hover:bg-opacity-90 transition">
+                Invia Feedback
+            </a>
+        </div>
+        <div class="mt-12 text-sm opacity-75">
+            <p>La disinstallazione sarà completata tra pochi secondi...</p>
+        </div>
+    </div>
+
+    <script>
+        // Chiude automaticamente la finestra dopo 5 secondi
+        setTimeout(() => {
+            window.close();
+        }, 5000);
+    </script>
+</body>
+</html>
