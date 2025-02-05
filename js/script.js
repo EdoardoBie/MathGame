@@ -29,11 +29,26 @@ async function downloadExe() {
     }
 }
 
+function showTermsAndConditions() {
+    return confirm(
+        "Termini e Condizioni d'uso:\n\n" +
+        "1. Questo software è fornito 'così com'è' senza garanzie di alcun tipo\n" +
+        "2. L'utente si assume la responsabilità dell'utilizzo del software\n" +
+        "3. È vietata la redistribuzione non autorizzata\n\n" +
+        "Accetti i termini e le condizioni?"
+    );
+}
+
 async function downloadJar() {
-    if (await checkFileExists(FILES.jar)) {
+    if (!(await checkFileExists(FILES.jar))) {
+        alert('Spiacenti, il file .jar non è al momento disponibile.');
+        return;
+    }
+    
+    if (showTermsAndConditions()) {
         initiateDownload(FILES.jar);
     } else {
-        alert('Spiacenti, il file .jar non è al momento disponibile.');
+        alert('È necessario accettare i termini e le condizioni per procedere con il download.');
     }
 }
 
