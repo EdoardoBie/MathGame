@@ -2,12 +2,12 @@ const FILES = {
     exe: {
         name: 'MathGame-1.0.exe',
         path: './downloads/MathGame-1.0.exe',
-        size: '9.87 MB'
+        size: '9.22 MB'
     },
     jar: {
         name: 'MathGame-1.0.jar',
         path: './downloads/MathGame-1.0.jar',
-        size: '2.7 MB'
+        size: '8.94 MB'
     }
 };
 
