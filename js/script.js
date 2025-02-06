@@ -73,3 +73,11 @@ function showDownloadStarted(file) {
 
 window.downloadExe = downloadExe;
 window.downloadJar = downloadJar;
+
+// Aggiungi in fondo al file
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+}
+
+window.toggleMobileMenu = toggleMobileMenu;

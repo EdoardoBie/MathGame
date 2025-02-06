@@ -12,92 +12,112 @@
     <script src="js/cookies.js" defer></script>
   </head>
   <body>
+    <!-- Modifica della navigation bar per dispositivi mobili -->
     <nav class="fixed top-0 left-0 right-0 z-50 bg-white shadow-lg">
-      <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
-      >
-        <div class="flex items-center">
-          <span class="text-3xl font-black text-indigo-600">🧮 MathGame</span>
+      <div class="container mx-auto px-4 sm:px-6 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex items-center">
+            <span class="text-2xl sm:text-3xl font-black text-indigo-600">🧮 MathGame</span>
+          </div>
+          <!-- Menu per desktop -->
+          <div class="hidden md:flex space-x-6">
+            <a
+              href="#home"
+              class="text-gray-700 hover:text-indigo-600 font-semibold"
+              >Home</a
+            >
+            <a
+              href="#features"
+              class="text-gray-700 hover:text-indigo-600 font-semibold"
+              >Funzioni</a
+            >
+            <a
+              href="#gallery"
+              class="text-gray-700 hover:text-indigo-600 font-semibold"
+              >Galleria</a
+            >
+            <a
+              href="#contacts"
+              class="text-gray-700 hover:text-indigo-600 font-semibold"
+              >Contatti</a
+            >
+            <a
+              href="#download"
+              class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition"
+            >
+              Scarica
+            </a>
+          </div>
+          <!-- Menu per mobile -->
+          <div class="md:hidden">
+            <button onclick="toggleMobileMenu()" class="text-gray-700 hover:text-indigo-600">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="space-x-6">
-          <a
-            href="#home"
-            class="text-gray-700 hover:text-indigo-600 font-semibold"
-            >Home</a
-          >
-          <a
-            href="#features"
-            class="text-gray-700 hover:text-indigo-600 font-semibold"
-            >Funzioni</a
-          >
-          <a
-            href="#gallery"
-            class="text-gray-700 hover:text-indigo-600 font-semibold"
-            >Galleria</a
-          >
-          <a
-            href="#contacts"
-            class="text-gray-700 hover:text-indigo-600 font-semibold"
-            >Contatti</a
-          >
-          <a
-            href="#download"
-            class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition"
-          >
-            Scarica
-          </a>
+        <!-- Mobile menu dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4">
+          <div class="flex flex-col space-y-4">
+            <a href="#home" class="text-gray-700 hover:text-indigo-600 font-semibold">Home</a>
+            <a href="#features" class="text-gray-700 hover:text-indigo-600 font-semibold">Funzioni</a>
+            <a href="#gallery" class="text-gray-700 hover:text-indigo-600 font-semibold">Galleria</a>
+            <a href="#contacts" class="text-gray-700 hover:text-indigo-600 font-semibold">Contatti</a>
+            <a href="#download" class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition text-center">
+              Scarica
+            </a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <header
-      id="home"
-      class="hero-gradient text-white pt-24 pb-32 clip-path-hero"
-    >
-      <div
-        class="container mx-auto px-6 flex flex-col md:flex-row items-center"
-      >
-        <div class="md:w-1/2 text-center md:text-left">
-          <h1 class="text-5xl font-black mb-6 leading-tight">
-            Matematica Diventa Magia
-          </h1>
-          <p class="text-xl mb-10 font-medium opacity-90">
-            Un'esperienza di apprendimento rivoluzionaria che trasforma i numeri
-            in un viaggio emozionante e interattivo.
-          </p>
-          <div class="flex justify-center md:justify-start space-x-4">
-            <a
-              href="#download"
-              class="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 pulse-element"
-            >
-              Inizia Gratis
-            </a>
-            <a
-              href="#features"
-              class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-600"
-            >
-              Scopri Come
-            </a>
+    <!-- Modifica della sezione hero per miglior responsiveness -->
+    <header id="home" class="hero-gradient text-white pt-32 sm:pt-24 pb-32 clip-path-hero">
+      <div class="container mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 text-center md:text-left">
+            <h1 class="text-4xl sm:text-5xl font-black mb-6 leading-tight">
+              Matematica Diventa Magia
+            </h1>
+            <p class="text-xl mb-10 font-medium opacity-90">
+              Un'esperienza di apprendimento rivoluzionaria che trasforma i numeri
+              in un viaggio emozionante e interattivo.
+            </p>
+            <div class="flex justify-center md:justify-start space-x-4">
+              <a
+                href="#download"
+                class="bg-white text-indigo-600 px-8 py-3 rounded-full font-bold hover:bg-gray-100 pulse-element"
+              >
+                Inizia Gratis
+              </a>
+              <a
+                href="#features"
+                class="border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-indigo-600"
+              >
+                Scopri Come
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="md:w-1/2 mt-10 md:mt-0 floating-element">
-          <img
-            src="assets/MathGameCover.png"
-            alt="MathQuest Gameplay"
-            class="rounded-3xl shadow-2xl"
-          />
+          <div class="md:w-1/2 mt-10 md:mt-0 floating-element">
+            <img
+              src="assets/MathGameCover.png"
+              alt="MathQuest Gameplay"
+              class="rounded-3xl shadow-2xl"
+            />
+          </div>
         </div>
       </div>
     </header>
 
     <section id="features" class="py-24 bg-gray-50">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-black text-center mb-16 text-gray-800">
+        <h2 class="text-4xl font-black text-center mb-16 text-gray-800 animate-fadeIn">
           Perché MathGame è Unico
         </h2>
         <div class="grid md:grid-cols-3 gap-10">
           <div
-            class="feature-card bg-white p-8 rounded-3xl shadow-xl text-center"
+            class="feature-card bg-white p-8 rounded-3xl shadow-xl text-center animate-scaleIn delay-100"
           >
             <div class="text-6xl mb-6 text-green-500">🚀</div>
             <h3 class="text-2xl font-bold mb-4 text-gray-800">
@@ -109,7 +129,7 @@
             </p>
           </div>
           <div
-            class="feature-card bg-white p-8 rounded-3xl shadow-xl text-center"
+            class="feature-card bg-white p-8 rounded-3xl shadow-xl text-center animate-scaleIn delay-200"
           >
             <div class="text-6xl mb-6 text-pink-500">🧠</div>
             <h3 class="text-2xl font-bold mb-4 text-gray-800">
@@ -121,7 +141,7 @@
             </p>
           </div>
           <div
-            class="feature-card bg-white p-8 rounded-3xl shadow-xl text-center"
+            class="feature-card bg-white p-8 rounded-3xl shadow-xl text-center animate-scaleIn delay-300"
           >
             <div class="text-6xl mb-6 text-blue-500">🌈</div>
             <h3 class="text-2xl font-bold mb-4 text-gray-800">Consigli</h3>
@@ -136,7 +156,7 @@
 
     <section id="gallery" class="py-24 bg-white">
       <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-black mb-12 text-center text-gray-800">
+        <h2 class="text-4xl font-black mb-12 text-center text-gray-800 animate-fadeIn">
           Galleria di Immagini
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,7 +166,7 @@
             <img
               src="assets/1.png"
               alt="Screenshot 1"
-              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 animate-fadeIn delay-200"
             />
           </div>
           <div
@@ -155,7 +175,7 @@
             <img
               src="assets/2.png"
               alt="Screenshot 2"
-              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 animate-fadeIn delay-200"
             />
           </div>
           <div
@@ -164,7 +184,7 @@
             <img
               src="assets/3.png"
               alt="Screenshot 3"
-              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 animate-fadeIn delay-200"
             />
           </div>
           <div
@@ -173,7 +193,7 @@
             <img
               src="assets/4.png"
               alt="Screenshot 4"
-              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 animate-fadeIn delay-200"
             />
           </div>
           <div
@@ -182,7 +202,7 @@
             <img
               src="assets/5.png"
               alt="Screenshot 5"
-              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 animate-fadeIn delay-200"
             />
           </div>
           <div
@@ -191,7 +211,7 @@
             <img
               src="assets/6.png"
               alt="Screenshot 6"
-              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300"
+              class="w-full h-64 object-cover hover:scale-105 transition-transform duration-300 animate-fadeIn delay-200"
             />
           </div>
         </div>
@@ -213,19 +233,20 @@
             Download Gratuito
           </h3>
 
-          <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <!-- Modifica della sezione download per mobile -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8 mb-8">
             <div class="md:col-span-2">
               <h4 class="text-xl font-bold mb-4 text-indigo-600">Windows</h4>
               <div class="grid md:grid-cols-2 gap-4">
                 <button
                   onclick="downloadExe()"
-                  class="w-full bg-blue-500 text-white py-3 px-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition flex items-center justify-center"
+                  class="w-full bg-blue-500 text-white py-3 px-4 rounded-lg text-lg font-semibold hover:bg-blue-600 transition flex items-center justify-center animate-bounce"
                 >
                   <span class="mr-2">🪟</span> Windows (.exe)
                 </button>
                 <button
                   onclick="downloadJar()"
-                  class="w-full border-2 border-blue-500 text-blue-500 py-3 px-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition flex items-center justify-center"
+                  class="w-full border-2 border-blue-500 text-blue-500 py-3 px-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition flex items-center justify-center animate-bounce"
                 >
                   <span class="mr-2">☕</span> Windows (.jar)
                 </button>
@@ -238,7 +259,7 @@
               </h4>
               <button
                 onclick="downloadJar()"
-                class="w-full bg-gray-800 text-white py-3 px-4 rounded-lg text-lg font-semibold hover:bg-gray-900 transition flex items-center justify-center"
+                class="w-full bg-gray-800 text-white py-3 px-4 rounded-lg text-lg font-semibold hover:bg-gray-900 transition flex items-center justify-center animate-bounce"
               >
                 <span class="mr-2">☕</span> macOS/Linux (.jar)
               </button>
@@ -386,9 +407,6 @@
           <a href="#contacts" class="text-gray-400 hover:text-white">Contatti</a>
         </div>
       </div>
-    </footer>
-  </body>
-</html>
     </footer>
   </body>
 </html>
